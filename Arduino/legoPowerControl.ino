@@ -43,6 +43,8 @@ void loop() {
   chrismasTree(pinsArray);
 }
 
+/* Bonjour */
+
 void blinkLed(int times) {
   for (int i = 0; i < times; i++) {
     digitalWrite(LED_BUILTIN, HIGH);  
@@ -61,3 +63,5 @@ void christmasTree(int pins[3]) {
   }
 }
 
+/* Mon but est de faire un conflict :) */
+/* Et bah c'est raté mon gars ! */
