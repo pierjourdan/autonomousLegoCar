@@ -16,6 +16,11 @@ void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
   Serial.begin(9600);
+  
+  // needed by the amazing Christmas tree feature
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(13, OUTPUT);
 }
 
 void loop() {
@@ -31,6 +36,11 @@ void loop() {
       blinkLed(2);
     }
   }
+  
+    
+  // Enlights a beautiful 3 leds Christmas tree ! What an amazing feature !
+  int pinsArray[3] = {13,12,11};
+  chrismasTree(pinsArray);
 }
 
 void blinkLed(int times) {
@@ -39,6 +49,15 @@ void blinkLed(int times) {
     delay(150);                
     digitalWrite(LED_BUILTIN, LOW);
     delay(100);
+  }
+}
+
+void christmasTree(int pins[3]) {
+  short int i;
+  for(i=3;i>=0;i--) {
+    digitalWrite(pins[i], HIGH);   // turn the LED on (HIGH is the voltage level)
+    delay(100);
+    digitalWrite(pins[i], LOW);    // turn the LED off by making the voltage LOW
   }
 }
 
