@@ -33,6 +33,8 @@ void loop() {
   }
 }
 
+/* Bonjour */
+
 void blinkLed(int times) {
   for (int i = 0; i < times; i++) {
     digitalWrite(LED_BUILTIN, HIGH);  
@@ -41,4 +43,6 @@ void blinkLed(int times) {
     delay(100);
   }
 }
+
+/* Mon but est de faire un conflict :) */
 
